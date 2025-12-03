@@ -1,4 +1,4 @@
-package com.example;
+package com.company.stripe;
 
 import java.util.*;
 
