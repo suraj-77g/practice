@@ -6,9 +6,9 @@ A structured repository for mastering computer science fundamentals, exploring s
 
 - **`coding-prct/`**: Core Java implementations.
   - **`com.dsa`**: From-scratch implementations of fundamental data structures (LinkedLists, Trees, Heaps, Graphs, etc.) and algorithmic patterns.
-  - **`com.arrays`**: Specialized array and two-pointer problem solutions.
-  - **`com.company`**: Real-world interview problems (e.g., Stripe).
-- **`notes/`**: Deep dives into system design, databases (OLTP, Cassandra), and networking essentials.
+  - **`com.patterns`**: Common problem patterns.
+  - **`com.company`**: Real-world interview problems.
+- **`notes/`**: Deep dives into system design, databases etc.
 - **`GEMINI.md`**: Project-wide coding standards and development workflow guidelines.
 
 ## 🚀 Getting Started
