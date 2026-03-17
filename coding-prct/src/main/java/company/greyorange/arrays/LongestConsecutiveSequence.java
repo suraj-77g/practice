@@ -1,4 +1,4 @@
-package com.company.greyorange.arrays;
+package company.greyorange.arrays;
 
 /*
     Sample Input/Output
@@ -9,6 +9,17 @@ package com.company.greyorange.arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Time Complexity: O(n) (each number visited at most twice).
+ * Space Complexity: O(n) for the HashSet.
+ *
+ * Pattern: HashSet / Streak Building
+ *
+ * Trick:
+ * 1. Store all numbers in a HashSet for O(1) lookups.
+ * 2. Only start a streak calculation if the current number is the *beginning* of a sequence (i.e., `num - 1` is not in the set).
+ * 3. This ensures each sequence element is only visited a constant number of times.
+ */
 public class LongestConsecutiveSequence {
 
     public static void main(String[] args) {

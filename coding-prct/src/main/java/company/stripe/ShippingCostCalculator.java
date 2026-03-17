@@ -1,4 +1,4 @@
-package com.company.stripe;
+package company.stripe;
 
 import java.util.Map;
 

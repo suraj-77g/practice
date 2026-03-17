@@ -1,4 +1,4 @@
-package com.dsa.binarysearch;
+package dsa.binarysearch;
 
 /**
  * Time Complexity: O(log(m * n))

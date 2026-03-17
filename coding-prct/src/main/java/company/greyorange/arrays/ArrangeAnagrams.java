@@ -1,4 +1,4 @@
-package com.company.greyorange.arrays;
+package company.greyorange.arrays;
 
 import java.util.*;
 
@@ -6,6 +6,17 @@ import java.util.*;
 //Input: strs = ["eat","tea","tan","ate","nat","bat"]
 //Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 
+/**
+ * Time Complexity: O(N * K log K) where N is number of strings and K is max string length.
+ * Space Complexity: O(N * K) for storing the map of strings.
+ *
+ * Pattern: Sorting & Hashing
+ *
+ * Trick:
+ * 1. Convert each string to a sorted char array to create a canonical "anagram key".
+ * 2. Use a Map to group original strings by this key.
+ * 3. Return the grouped values as a list of lists.
+ */
 public class ArrangeAnagrams {
 
     public static void main(String[] args) {

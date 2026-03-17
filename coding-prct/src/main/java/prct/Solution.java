@@ -1,4 +1,4 @@
-package com.prct;
+package prct;
 
 import java.util.Scanner;
 import java.util.Set;
