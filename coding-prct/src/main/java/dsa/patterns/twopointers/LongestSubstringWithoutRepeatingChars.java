@@ -3,6 +3,8 @@ package dsa.patterns.twopointers;
 import java.util.HashSet;
 import java.util.Set;
 
+
+// Trick: Use sliding window with set
 public class LongestSubstringWithoutRepeatingChars {
 
     static class Solution {
@@ -12,27 +14,17 @@ public class LongestSubstringWithoutRepeatingChars {
         //            r
         public int lengthOfLongestSubstring(String s) {
             int l = 0;
-            int r = 0;
-
             int n = s.length();
 
             int maxLength = 0;
             Set<Character> window = new HashSet<>();
 
-            while (r < n) {
-                if (!window.contains(s.charAt(r))) {
-                    window.add(s.charAt(r));
-                    r++;
-                    maxLength = Math.max(maxLength, window.size());
-                    continue;
-                } else {
-                    while (window.contains(s.charAt(r))) {
-                        window.remove(s.charAt(l));
-                        l++;
-                    }
-                    window.add(s.charAt(r));
-                    r++;
+            for (int r = 0; r < n; r++) {
+                while (window.contains(s.charAt(r))) {
+                    window.remove(s.charAt(l++));
                 }
+                window.add(s.charAt(r));
+                maxLength = Math.max(maxLength, r - l + 1);
             }
             return maxLength;
         }
