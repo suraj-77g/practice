@@ -1,5 +1,7 @@
 package dsa.patterns.twopointers;
 
+import java.util.List;
+
 // Trick: Use 1 slow pointer and 1 fast pointer
 public class RemoveDuplicates {
 
@@ -7,26 +9,15 @@ public class RemoveDuplicates {
 
         // [0,0,1,1,1,2,2,3,3,4]
         //      i,j
-        public int removeDuplicates(int[] nums) {
-            int n = nums.length;
-            if (n <= 1)
-                return n;
-
-            int i = 0;
-            int j = 0;
-
-            while (j < n) {
-                while (j < n && nums[j] == nums[i]) {
-                    j++;
-                }
-                if (j < n) {
-                    i++;
-                    nums[i] = nums[j];
-                    j++;
+        public static int removeDuplicates(List<Integer> arr) {
+            int slow = 0;
+            for (int fast = 0; fast < arr.size(); fast++) {
+                if (!arr.get(fast).equals(arr.get(slow))) {
+                    slow++;
+                    arr.set(slow, arr.get(fast));
                 }
             }
-
-            return i+1;
+            return slow + 1;
         }
     }
 
