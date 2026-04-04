@@ -1,5 +1,10 @@
 package dsa.patterns.trees;
 
+/*
+    Given two binary trees root and subRoot, determine if subRoot is a subtree of root.
+    A subtree of a binary tree is a tree that consists of a node in the tree and all of its descendants.
+    An empty tree is considered a subtree of any tree (including another empty tree).
+ */
 public class SubTree {
 
     /**
