@@ -1,3 +1,6 @@
+# Claude Code session data (worktrees, plans, memory)
+.claude/
+
 # IDE-specific configurations
 .idea/
 *.iml
