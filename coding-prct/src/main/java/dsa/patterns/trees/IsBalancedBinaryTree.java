@@ -26,6 +26,7 @@ public class IsBalancedBinaryTree {
      * }
      */
     static class Solution {
+
         public boolean isBalanced(TreeNode root) {
             return checkHeightAndBalanced(root)[0] == 1;
         }
@@ -43,6 +44,30 @@ public class IsBalancedBinaryTree {
             }
             return new int[] {0, -1};
         }
+    }
+
+
+
+    public boolean isBalancedV2(TreeNode root) {
+        return getHeight(root) != -1;
+    }
+
+    private int getHeight(TreeNode root) {
+        if (root == null) return 0;
+
+        int leftHeight = getHeight(root.left);
+        // If left subtree is unbalanced, pass the error up immediately
+        if (leftHeight == -1) return -1;
+
+        int rightHeight = getHeight(root.right);
+        // If right subtree is unbalanced, pass the error up immediately
+        if (rightHeight == -1) return -1;
+
+        // If the current node is unbalanced
+        if (Math.abs(leftHeight - rightHeight) > 1) return -1;
+
+        // Otherwise, return the actual height
+        return Math.max(leftHeight, rightHeight) + 1;
     }
 
 }
