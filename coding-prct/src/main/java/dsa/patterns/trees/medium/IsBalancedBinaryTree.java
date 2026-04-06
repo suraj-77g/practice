@@ -3,6 +3,8 @@ package dsa.patterns.trees.medium;
 import dsa.patterns.trees.TreeNode;
 
 /*
+    Trick: Use bottom-up approach
+
     Start at the leaves and work upward.
     At each node, get both the balance status and height from both children.
     If either child reports an unbalanced subtree, the current subtree is also unbalanced.
