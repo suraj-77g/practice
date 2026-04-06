@@ -26,6 +26,7 @@ public class SubTree {
 
         public boolean isSubtree(TreeNode root, TreeNode subRoot) {
             // If the main tree is empty, subRoot cannot be a subtree
+            if (subRoot == null) return true;
             if (root == null) return false;
 
             // 1. Check if the trees starting at these nodes are identical
