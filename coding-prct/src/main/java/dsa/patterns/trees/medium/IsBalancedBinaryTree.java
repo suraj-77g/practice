@@ -1,4 +1,6 @@
-package dsa.patterns.trees;
+package dsa.patterns.trees.medium;
+
+import dsa.patterns.trees.TreeNode;
 
 /*
     Start at the leaves and work upward.

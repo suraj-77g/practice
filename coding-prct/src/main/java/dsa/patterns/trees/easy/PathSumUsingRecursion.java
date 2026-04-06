@@ -1,4 +1,6 @@
-package dsa.patterns.trees;
+package dsa.patterns.trees.easy;
+
+import dsa.patterns.trees.TreeNode;
 
 public class PathSumUsingRecursion {
 

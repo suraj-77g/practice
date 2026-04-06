@@ -1,4 +1,6 @@
-package dsa.patterns.trees;
+package dsa.patterns.trees.easy;
+
+import dsa.patterns.trees.TreeNode;
 
 public class pathSumUsingDFS {
 
@@ -18,10 +20,7 @@ public class pathSumUsingDFS {
             if (root.left == null && root.right == null && target == sum)
                 return true;
 
-            if (dfs(root.left, sum, target))
-                return true;
-
-            return dfs(root.right, sum, target);
+            return dfs(root.left, sum, target) || dfs(root.right, sum, target);
         }
     }
 

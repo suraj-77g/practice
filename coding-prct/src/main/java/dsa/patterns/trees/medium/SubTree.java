@@ -1,4 +1,6 @@
-package dsa.patterns.trees;
+package dsa.patterns.trees.medium;
+
+import dsa.patterns.trees.TreeNode;
 
 /*
     Given two binary trees root and subRoot, determine if subRoot is a subtree of root.

@@ -1,4 +1,6 @@
-package dsa.patterns.trees;
+package dsa.patterns.trees.easy;
+
+import dsa.patterns.trees.TreeNode;
 
 // To determine whether the subtree rooted at the current node is a BST or not,
 // we need to know the range (min, max value) the current node value is allowed to be in.

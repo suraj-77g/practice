@@ -1,6 +1,8 @@
-package dsa.patterns.trees;
+package dsa.patterns.trees.easy;
 
-public class InvertBinaryTree {
+import dsa.patterns.trees.TreeNode;
+
+public class SameTree {
 
     /**
      * Definition for a binary tree node.
@@ -19,17 +21,13 @@ public class InvertBinaryTree {
      */
     static class Solution {
 
-        public TreeNode invertTree(TreeNode root) {
-            if (root == null) return null;
+        public boolean isSameTree(TreeNode p, TreeNode q) {
+            if (p == null && q == null) return true;
+            if (p == null || q == null) return false;
 
-            TreeNode left = invertTree(root.left);
-            TreeNode right = invertTree(root.right);
-
-            root.left = right;
-            root.right = left;
-
-            return root;
+            return p.val == q.val && isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
         }
+
     }
 
 }

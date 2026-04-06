@@ -1,4 +1,4 @@
-package dsa.patterns.trees.basic;
+package dsa.patterns.trees.easy;
 
 import dsa.patterns.trees.TreeNode;
 

@@ -1,11 +1,11 @@
-package dsa.patterns.trees.basic;
+package dsa.patterns.trees.easy;
 
 import dsa.patterns.trees.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class InOrderTraversal {
+public class PostOrderTraversal {
 
     /**
      * Definition for a binary tree node.
@@ -23,19 +23,19 @@ public class InOrderTraversal {
      * }
      */
     static class Solution {
-
-        public List<Integer> inorderTraversal(TreeNode root) {
-            List<Integer> inOrder = new ArrayList<>();
-            traverseInOrder(root, inOrder);
-            return inOrder;
+        public List<Integer> postorderTraversal(TreeNode root) {
+            List<Integer> result = new ArrayList<>();
+            traversePostOrder(root, result);
+            return result;
         }
 
-        private void traverseInOrder(TreeNode root, List<Integer> result) {
-            if (root == null) return;
+        private void traversePostOrder(TreeNode root, List<Integer> result) {
+            if (root == null)
+                return;
 
-            traverseInOrder(root.left, result);
+            traversePostOrder(root.left, result);
+            traversePostOrder(root.right, result);
             result.add(root.val);
-            traverseInOrder(root.right, result);
         }
     }
 
